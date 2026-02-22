@@ -1,8 +1,8 @@
-# AI Interview Analyzer v3.0 Alpha 🚀
+# Luminary AI v3.0 Alpha 🚀
 
 > **Unleash Your Full Potential.** Master your communication with biometric composure analysis, semantic sentiment mapping, and high-fidelity ML scoring.
 
-AI Interview Analyzer is a cutting-edge, full-stack platform designed to help candidates refine their interview skills using advanced AI and audio biometrics. By analyzing vocal patterns, facial expressions, and linguistic sentiment, it provides a comprehensive 360-degree view of your performance.
+Luminary AI is a cutting-edge, full-stack platform designed to help candidates refine their interview skills using advanced AI and audio biometrics. By analyzing vocal patterns, facial expressions, and linguistic sentiment, it provides a comprehensive 360-degree view of your performance.
 
 ---
 
@@ -40,8 +40,8 @@ AI Interview Analyzer is a cutting-edge, full-stack platform designed to help ca
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/AI-Interview-Analyzer.git
-cd AI-Interview-Analyzer
+git clone https://github.com/Harshithpalan/AI-Interview-Analyzer-.git
+cd AI-Interview-Analyzer-
 ```
 
 ### 2️⃣ Backend Setup
