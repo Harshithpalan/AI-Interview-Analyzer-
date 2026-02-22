@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-zinc-100 antialiased selection:bg-primary/30 selection:text-white overflow-x-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply heading-serif tracking-tight font-black;
+  }
+}
+
+@layer utilities {
+  .heading-serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/[0.05] rounded-[2rem];
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(40px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card {
+    @apply border border-white/[0.08] rounded-[2.5rem] transition-all duration-700;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(64px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary {
+    @apply px-10 py-4 bg-primary hover:bg-primary-hover text-white font-black rounded-2xl transition-all duration-500 shadow-2xl shadow-primary/20 hover:shadow-primary/50 hover:-translate-y-1.5 active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-xs;
+  }
+
+  .btn-outline {
+    @apply px-10 py-4 bg-transparent border-2 border-white/10 hover:border-primary/50 hover:bg-primary/5 text-white font-black rounded-2xl transition-all duration-500 active:scale-95 flex items-center justify-center gap-3 uppercase tracking-widest text-xs;
+  }
+
+  .premium-card {
+    @apply relative overflow-hidden glass-card hover:border-primary/30 hover:shadow-primary/5 hover:-translate-y-2;
+  }
+}
+
+/* Cinematic Nebula Background */
+.nebula-container {
+  @apply fixed inset-0 -z-10 overflow-hidden bg-[#0a0a0a];
+}
+
+.nebula-blob {
+  @apply absolute rounded-full mix-blend-screen filter blur-[120px] opacity-40;
+  width: 60vw;
+  height: 60vw;
+  animation: nebula 20s infinite ease-in-out;
+}
+
+.blob-1 {
+  background: radial-gradient(circle, rgba(242, 87, 43, 0.15) 0%, transparent 70%);
+  top: -10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  background: radial-gradient(circle, rgba(242, 87, 43, 0.1) 0%, transparent 70%);
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  top: 40%;
+  left: 30%;
+  animation-delay: -10s;
+}
+
+@keyframes nebula {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(10%, 10%) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-5%, 15%) scale(0.9);
+  }
+}
+
+.starfield {
+  @apply absolute inset-0 -z-20 opacity-30;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 50px 160px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 160px 120px, #fff, rgba(0, 0, 0, 0));
+  background-size: 200px 200px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-primary/50 border-4 border-transparent bg-clip-padding;
+}
